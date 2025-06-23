@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Crear Aviso</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="avisoForm" (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label position="floating">Título</ion-label>
+      <ion-input formControlName="titulo"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Descripción</ion-label>
+      <ion-textarea formControlName="descripcion"></ion-textarea>
+    </ion-item>
+    <ion-button type="submit" [disabled]="!avisoForm.valid">Guardar Aviso</ion-button>
+  </form>
+</ion-content>
